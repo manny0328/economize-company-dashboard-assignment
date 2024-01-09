@@ -11,17 +11,35 @@ function Header() {
         setLogin("Logout")
     }
 
-    const [value, Setvalue] = useState("");
-    const handleChange = e => {
-        Setvalue(e.target.value)
-    }
+    
 
     return (
-        
         <header className="dashboard-header">
-            <h2 className="logoname">BlueReceipt</h2>
-            
-            
+            <h2 className='logoname'>BlueRecipt</h2>
+            <Box
+                component="form"
+                sx={{
+                    '& > :not(style)': { m: 1, width: '80ch' },
+                }}
+                noValidate
+                autoComplete="off"
+            >
+                
+
+            </Box>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container">
+                    <div className="navigation" id="navbarNav">
+                        <ul className="navbar-nav ml-auto">
+                            
+                            
+                            <li className="nav-item">
+                                <a className="nav-link" href="/Login" onClick={handleLogin}>{Login}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             {/* </div>
             </div> */}
         </header>
